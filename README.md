@@ -1,5 +1,5 @@
-# DegenToken Smart Contract
-The DegenToken contract is an ERC20 token smart contract that enables various functionalities for players in the Degen Gaming platform. The contract is designed to provide the following features:
+# Token Smart Contract
+The Token contract is an ERC20 token smart contract that enables various functionalities for players in the Gaming platform. The contract is designed to provide the following features:
 
 ```solidity
 function mintTokens(address to, uint amount)
@@ -48,4 +48,4 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 
 ## Compiling and Deploying
 
-Compile and Deploy the smart contract using Remix IDE and you can then interact with the various functions present and burn and mint DegenTokens
+Compile and Deploy the smart contract using Remix IDE and you can then interact with the various functions present and burn and mint Tokens
