@@ -1,44 +1,26 @@
-# Token Smart Contract
-The Token contract is an ERC20 token smart contract that enables various functionalities for players in the Gaming platform. The contract is designed to provide the following features:
+# Secure Token Smart Contract for Gaming Platform
 
-```solidity
-function mintTokens(address to, uint amount)
-```
-The platform owner can create new tokens and distribute them as rewards to players. Only the contract owner has the authority to mint tokens, which is verified using a require function.
+The Secure Token contract is an ERC20 token smart contract designed to provide various functionalities for players in the Gaming platform. The contract enables the following features:
 
-```solidity
-function transferTokens(address receiver, uint amount)
-```
-Players can transfer their tokens to others. They can initiate token transfers to any address by specifying the recipient and the amount of tokens they wish to transfer.
+## Features
 
-```solidity
-function checkBalance()
-```
-Players can check their token balance at any time by calling the checkBalance function. It returns the balance of tokens held by the caller's address.
+1. **Mint Secure Tokens**: The platform owner can create new secure tokens and distribute them as rewards to players. Only the contract owner has the authority to mint secure tokens.
 
-```solidity
-function addItem(string memory item, uint price)
-```
-The owner can add game items which can be purchased by the players if they have sufficient funds and the required allowance to spend the given funds
+2. **Transfer Secure Tokens**: Players can transfer their secure tokens to others by specifying the recipient's address and the amount of secure tokens to transfer.
 
-```solidity
-function getPrice(string memory item)
-```
-The players can get the price of the items that are available in the menu using this function.
+3. **Check Token Balance**: Players can check their secure token balance at any time using the `checkTokenBalance` function.
 
-```solidity
-function burnTokens(uint amount)
-```
-Any token holder can burn their own tokens if they are no longer needed. The burnTokens function allows token holders to burn a specific amount of tokens from their own balance.
+4. **Add Game Item**: The owner can add game items that players can purchase using their secure tokens, subject to available funds and allowances.
 
-```solidity
- function redeem(string memory item)
-```
-It will check the available tokens and the price and if the coditions are met it will transact the token to the user's account address
+5. **Get Item Secure Price**: Players can check the price of items available in the menu using the `getItemSecurePrice` function.
 
-## Importing Dependencies
+6. **Burn Secure Tokens**: Token holders can burn their own secure tokens if they are no longer needed, using the `burnSecureTokens` function.
 
-You have to import the following dependencies to run and deploy this smart contract
+7. **Redeem Game Items**: Players can redeem game items by paying the required secure tokens. The `redeemGameItem` function handles the redemption process.
+
+## Dependencies
+
+Before compiling and deploying the secure token smart contract, make sure to import the required dependencies:
 
 ```solidity
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -46,6 +28,43 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 ```
 
-## Compiling and Deploying
+# Compiling and Deploying
 
-Compile and Deploy the smart contract using Remix IDE and you can then interact with the various functions present and burn and mint Tokens
+To compile and deploy the secure token smart contract, follow these steps:
+
+Open the Remix IDE (https://remix.ethereum.org/).
+
+Create a new Solidity file.
+
+Copy and paste the smart contract code into the file.
+
+Make sure you have selected the appropriate compiler version (e.g., pragma solidity 0.8.18;).
+
+Click the "Compile" button in Remix to compile the smart contract.
+
+Once compiled successfully, go to the "Deploy & Run Transactions" tab.
+
+Choose the appropriate environment (e.g., JavaScript VM, Injected Web3, etc.).
+
+Click the "Deploy" button to deploy the secure token smart contract to the selected environment.
+
+Interacting with the Contract
+After deploying the contract, you can interact with its functions using the Remix IDE or other Ethereum-compatible tools. Use the appropriate environment and address to call the functions:
+
+Mint Secure Tokens: Only the contract owner can call the mintSecureTokens function to create and distribute new secure tokens.
+
+Transfer Secure Tokens: Players can initiate secure token transfers using the transferSecureTokens function.
+
+Check Token Balance: Players can view their secure token balance using the checkTokenBalance function.
+
+Add Game Item and Get Item Secure Price: The contract owner can manage game items and their prices using these functions.
+
+Burn Secure Tokens: Token holders can burn their secure tokens using the burnSecureTokens function.
+
+Redeem Game Items: Players can redeem game items by paying the required secure tokens using the redeemGameItem function.
+
+
+
+
+
+
